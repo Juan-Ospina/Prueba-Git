@@ -2,8 +2,12 @@ class ArticlesController < ApplicationController
 	def create
 	  @article = Article.create(article_params)
 	 
-	#  @article.save
-	#  redirect_to @article
+	  @article.save
+	  redirect_to @article
+	end
+
+	def show
+	    @article = Article.find(params[:id])
 	end
 	 
 	private
@@ -14,9 +18,7 @@ class ArticlesController < ApplicationController
 	#    @articles = Article.all
 	#end
 	 
-	#def show
-	#    @article = Article.find(params[:id])
-	#end
+
 	 
 	#def new	
 	#end
