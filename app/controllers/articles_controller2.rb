@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	def new		#1
 	end
 	def create	#2
-		render plain: params[:article].inspect
+	#	render plain: params[:article].inspect
 	#end	
 	#def create	#3
 	#	@article=Article.new(params[:article])
@@ -25,6 +25,6 @@ class ArticlesController < ApplicationController
 	    @article = Article.find(params[:id])
 	end
 	 
-	def new
-	end
+	#def new
+	#end
 end
